@@ -1,0 +1,5 @@
+{
+  "name": "Resume Relevance Checker",
+  "description": "An AI-powered system that evaluates resumes against job descriptions to score and rank candidates based on skill relevance.",
+  "requestFramePermissions": []
+}

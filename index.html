@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Relevance Checker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f172a; /* slate-900 */
+      color: #e2e8f0; /* slate-200 */
+    }
+    /* Custom Scrollbar for Webkit browsers */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #1e293b; /* slate-800 */
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #475569; /* slate-600 */
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #64748b; /* slate-500 */
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          animation: {
+            spin: 'spin 1s linear infinite',
+            'fade-in-slide-up': 'fade-in-slide-up 0.5s ease-out forwards',
+            'fade-in-down': 'fade-in-down 0.5s ease-out forwards',
+          },
+          keyframes: {
+            spin: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            },
+            'fade-in-slide-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'fade-in-down': {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-poppins">
+  <div id="root"></div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.1.1",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+      "react/": "https://aistudiocdn.com/react@^19.1.1/",
+      "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+      "recharts": "https://aistudiocdn.com/recharts@^3.2.1"
+    }
+  }
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
